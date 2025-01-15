@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="rest_survey.css"/>
+</head>
+<body>
+<h1>Find a Restaurant For You</h1>
+<div class="sidenav">
+    <h2>Price Preference</h2>
+    <input type="checkbox" id="price_matter" oninput="price_visible()">
+    <label>Price doesn't matter</label>
+    <div id="price">
+        <h4>Price level</h4>
+        <input type="range" min="1" max="5" value="1" id="price_input" oninput="price_val()">
+        <p id="price_val">$</p>
+        <div id="award_winning">
+            <input type="checkbox" id="award_check">
+            <label>Award Winning</label>
+        </div>
+    </div>
+    <input type="checkbox" id="rating_matter" oninput="rating_visible()">
+    <label>Rating doesn't matter</label>
+    <div id="rating">
+        <h4>Minimum Average Rating</h4>
+        <input type="range" min="-1" max="5" value="-1" id="rating_input" step="0.1" oninput="rating_val()">
+        <p id="rating_val"></p>
+        <label>Optional: Minimum amount of reviews</label>
+        <input type="number" min="0" id="min_review">
+    </div>
+    <div id="dine_opts">
+        <h4>Dining Options</h4>
+        <input type="checkbox" id="delivery">
+        <label>Has Delivery</label>
+        <input type="checkbox" id="reservation">
+        <label>Has Reservation</label>
+    </div>
+    <button onclick="filter()">Enter</button>
+</div>
+<div id="filter_dropdown" class="dropdown">
+    <button onsubmit="event.preventDefault()" onmouseover="tag_filter()" class="dropBtn">Filter by Tags and Cuisine</button>
+    <div id="filter_opts" class="dropdown-content"></div>
+</div>
+<div id="rest_opts"></div>
+
+<script src="restaurant_survey.js"></script>
+</body>
+</html>

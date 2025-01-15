@@ -1,0 +1,211 @@
+.nav, .btn {
+    display: flex;
+    justify-content: space-around;
+}
+body {
+    text-align: center;
+    color: white; 
+    font-family: FF Nexus Serif;
+}
+.navBtn {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+p {
+    font-size: 20px;
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+    margin-top: 100px; /* Adjust the margin-top as needed */
+    margin-left: auto;
+    margin-right:auto;
+}
+a {
+    text-decoration: none;
+}
+
+button {
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 25px;
+    border-width: 0;
+    background-color: #FB607F;
+    color: white;
+}
+
+
+h1{
+    padding-top: 250px;
+    font-size: 75px;
+}
+.recipe {
+    background: linear-gradient(91.9deg, rgb(75, 207, 250) 6.3%, rgb(25, 159, 249) 98.9%);
+}
+.restruant {
+    background: linear-gradient(102.2deg, rgb(250, 45, 66) 9.6%, rgb(245, 104, 104) 96.1%);
+}
+.recipe #recBtn {
+    background-color: white;
+    color: black;
+}
+.restruant #restBtn {
+    background-color: white;
+    color: black;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.slides {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+#slide3 {
+    height: 500vh;
+
+}
+#collage_img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 20px;
+    box-shadow: 60px -16px teal;
+}
+#body-text {
+    max-width: 40%;
+}
+.slide2 {
+    display:flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 50px;
+    padding-top: 0px;
+    align-items: center;
+
+}
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Youtuber";
+    color: white;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid white;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+.recipe-animate span::after {
+    background-color: #30b4fc;
+}
+
+.restruant-animate span::after {
+    background-color: #f45460;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Italian Food";
+    }
+    21%,40%{
+        content: "Greek Food";
+    }
+    41%,60%{
+        content: "Indian Food";
+    }
+    61%,80%{
+        content: "Chinese Food";
+    }
+    81%,100%{
+        content: "Japanese Food";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(0 142 204);
+}
+.card:hover {
+    box-shadow: 0 16px 32px black;
+}
+.cardImg {
+    max-width: 225px;
+    border-radius: 8px;
+}
+#recs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#rec_header {
+    font-size: 40px;
+    padding-top: 50px;
+}
+  @media (max-width: 1000px) {
+    .card {
+        width: 150px;
+        height: 200px;
+        margin: 20px
+    }
+    .cardImg {
+        width: 112px
+    }
+    img {
+        width: 300px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    button {
+        padding:20px;
+    }
+  }

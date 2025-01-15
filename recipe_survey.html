@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Survey</title>
+    <link rel="stylesheet" type="text/css" href="survey.css"/>
+</head>
+<body class="recipe">
+    <div class="nav">
+        <a href="recipes.html" id="recBtn" class="navBtn">Recipes</a>
+        <a href="restaurant.html" id="restBtn" class="navBtn">Restuarants</a>
+    </div>
+    <h1>Find a Recipe for You</h1>
+    <div id="search_specifc">
+        <label>Search for your favourite meal</label>
+        <br>
+        <input type="text" id="search" placeholder="Meal Name">
+        <button onclick="search()" onsubmit="event.preventDefault()" id="search_btn">Enter</button>
+    </div>
+    
+    <form style="display: flex;">
+        <div class="selection category">
+            <label>Category: </label>
+            <select name="category" id="category" onchange="getCategory()">
+                <option value="Beef">Beef</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Dessert">Desert</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Pork">Pork</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Side">Side</option>
+                <option value="Starter">Starter</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Goat">Goat</option>
+            </select>
+            <button type="button" id="category_enter" onclick="giveCuisine()" onsubmit="event.preventDefault()">Enter</button>
+        </div>
+        <div class="selection" id="cuisine_div">
+            <label>Cuisine: </label>
+            <select name="cuisine" id="cuisine"></select>
+            <button type="button" id="cuisine_enter" onsubmit="event.preventDefault()" onclick="ingredient_visible()">Enter</button>
+        </div>
+        <div class="selection" id="main_ingredient_div">
+            <label>Main Ingredient: </label>
+            <br>
+            <input type="text" id="main_ingredient" placeholder="Optional">
+            <button type="button" id="ingredient_enter" onsubmit="event.preventDefault()" onclick="searchIngredient()">Submit</button>
+        </div>
+    </form>
+    <div id="filter_dropdown" class="dropdown">
+        <button onsubmit="event.preventDefault()" onmouseover="createFilter()" class="dropBtn">Filter by Ingredient</button>
+        <div id="ingredient_opts" class="dropdown-content"></div>
+    </div>
+    
+    <div id="meal_opts">
+
+    </div>
+    <script src="survey.js"></script>
+</body>
+</html>

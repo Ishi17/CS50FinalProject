@@ -1,0 +1,128 @@
+body {
+  background-color: #f45460;
+}
+h2 {
+    max-width: 250px;
+    text-align: center;
+    font-size: 35px;
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    align-items: center;
+    text-decoration: none;
+    color: #f45460;
+}
+.card:hover {
+    box-shadow: 0 16px 32px black;
+}
+.cardImg {
+    max-width: 225px;
+    border-radius: 8px;
+}
+#rest_opts {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+#rest_opts {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+
+}
+.sidenav {
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 300px;
+    left: 30px;
+    height: 600px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f45460;
+    color: white;
+  }
+h1 {
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 60px;
+    background-color: #f45460;
+}
+#filter {
+    position: fixed;
+    left: 400px;
+    top: 280px;
+
+}
+.tag {
+    font-size: small;
+    color: black;
+    background-color: greenyellow;
+    border-color: green;
+    border-width: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    max-height: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 12px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+  }
+  .option_container {
+    display:flex;
+    justify-content: space-between;
+  }
+  .filter_ing {
+    color: rgb(0, 142, 204);
+    font-size: 20px;
+  }
+  .dropBtn {
+    background-color: white;
+    color: black;
+    margin-top: 40px;
+    margin-left: 350px;
+  }
+  #filter_opts {
+    margin-left: 350px;
+  }
